@@ -1,0 +1,46 @@
+.createformcontainer{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.createform{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form h1{
+    font-size: 28px;
+}
+input{
+    width: 100%;
+}
+label{
+    align-self: start;
+}
+.option{
+    width: 100%;
+}
+.btns{
+    width: 100%;
+    display: flex;
+}
+.btns button{
+    position: relative;
+    overflow: hidden;
+}
+form button .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+form button:hover .bg{
+    width: 100%;
+}

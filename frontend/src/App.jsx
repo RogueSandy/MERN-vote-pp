@@ -1,16 +1,21 @@
-import React, { useEffect } from 'react'
+import React from 'react'
+import "core-js/stable/atob";
 import './App.css'
 import { Provider } from 'react-redux'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { jwtDecode } from 'jwt-decode'
 
 import api from './services/api'
 import { store } from './store'
 import {setCurrentUser, addError, setToken} from './store/actions'
+import Navbar from './containers/Navbar';
+import RouteViews from './containers/RouteViews';
+import Modal from './modal/Modal';
 
 if(localStorage.jwttoken) {
-  setToken(localStorage.jwttoekn)
+  setToken(localStorage.jwttoken)
   try {
-    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwtToken)))
+    store.dispatch(setCurrentUser(jwtDecode(localStorage.jwttoken, { header: true })))
   } catch (err) {
     store.dispatch(setCurrentUser({}))
     store.dispatch(addError(err))
@@ -19,7 +24,14 @@ if(localStorage.jwttoken) {
 
 const App = () => {
   return <Provider store={store}>
-    <div>APP WORKS</div>
+    <Router>
+      <div className='maincontainer'>
+        <div className="container">
+          <Navbar />
+          <RouteViews />
+        </div>
+      </div>
+    </Router>
   </Provider>
 }
 

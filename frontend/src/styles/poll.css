@@ -1,0 +1,83 @@
+.pollcontainer {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+section{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.pollcontainer .poll {
+    /* background-color: red; */
+    padding-left: 7rem;
+    padding-top: 1rem;
+}
+.pollcontainer .poll h3, .pollcontainer .chart h3{
+    font-size: 24px;
+}
+
+.pollcontainer h3 {
+    font-size: 42px;
+    margin-bottom: 1rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.options button {
+    width: fit-content;
+    min-width: 100px;
+    padding: 5px 25px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.options button .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+.options button:hover .bg {
+    width: 100%;
+}
+
+
+/* charts */
+.chart {
+    width: 400px;
+    /* height: 400px; */
+    /* background-color: red; */
+}
+
+.chart p{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 600;
+}
+
+.winner{
+    font-size: 24px;
+    margin-bottom: 3rem;
+}
+.winner span{
+    font-weight: 600;
+}

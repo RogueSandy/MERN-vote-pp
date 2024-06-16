@@ -1,0 +1,27 @@
+.authpage{
+    /* background-color: red; */
+    display: flex;
+    height: 500px;
+}
+.sidebar{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 00, 0.1);
+    padding-top: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.sidebar .info{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.sidebar .info h1{
+    font-size: 22px;
+}
+.sidebar .info p{
+    font-size: 16px;
+}
+.sidebar a{
+    font-size: 14px;
+}
