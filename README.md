@@ -52,7 +52,6 @@ The frontend server will be running on http://localhost:3000.
  - Vote on available polls (one vote per poll per user).
  - View the poll results in a graphical format.
 
-# API Endpoints
 ## Technologies Used
  - MongoDB: For the database.
  - Express.js: For the backend framework.
